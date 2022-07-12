@@ -12,7 +12,7 @@ def searchfiles(filename, type=None):
         try:
             return fdict['exe'][filename.lower()]
         except:
-            print("it moves on...")
+            #print("it moves on...")
             choicep = []
             choicen = []
             for file in fdict['exe']:
@@ -21,12 +21,10 @@ def searchfiles(filename, type=None):
                     choicen.append(file)
             return(choicep)
 
-print(searchfiles('Brave'))
-
 
 def log_all_files(filetype=['exe', 'py', 'lnk']):
     date = datetime.now()
-    drives = ['C:\\', 'E:\\', 'C:\\Users\\dhanv']
+    drives = ['C:\\', 'E:\\', f'C:\\Users\\{os.getlogin()}']
     fldict = {'exe': {}, 'gen': {}}
     with open("preferences.json", "r") as lfile:
         try:
@@ -35,8 +33,8 @@ def log_all_files(filetype=['exe', 'py', 'lnk']):
             diff = str(date - old_date)
             #print(diff)
         except Exception as e:
-            diff = "24"
-    if int(diff.split(':')[0]) >= 24:
+            diff = "day"
+    if 'day' in diff:
         with open("preferences.json", "w+"):
             wdict = {"last_log": str(date)}
             for drive in drives:
@@ -45,7 +43,7 @@ def log_all_files(filetype=['exe', 'py', 'lnk']):
                     dirs[:] = [d for d in dirs if d not in exclude]
                     for file in files:
                         if file.split('.')[-1] in filetype:
-                            print(root+'\\'+file)
+                            #print(root+'\\'+file)
                             if file.endswith('.exe'):
                                 fldict['exe'][file.split('.exe')[0].lower()] = root + "\\"+ file
                             elif file.endswith('.lnk') and root == "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs":

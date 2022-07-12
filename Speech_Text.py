@@ -9,6 +9,8 @@ import webbrowser
 import pyttsx3
 import wikipedia
 
+log_all_files(['exe', 'py', 'lnk'])
+
 # word booleans
 positive = ['yes', 'sure', 'alright', 'ok', 'okay', 'k', 'yeah', 'yep', 'positive', 'mhm', 'alr', 'done', 'affirmative']
 negative = ['no', 'never', 'nope', 'nah', 'negative', 'meh']
@@ -119,4 +121,3 @@ def keep_alive():
             vas = please()
 
 keep_alive()
-log_all_files(['exe', 'py', 'lnk'])
