@@ -4,6 +4,7 @@
  Please hit me up with suggestions/bugs/errors or whatever it is you wanna tell me at Cweeper#9636
 
 How To Use
+
  The trigger as of now is 'please' followed by whatever you want the assistant to do. The Assistant can perform a set of functions which Include:
  
  - Opening an exe file: 'please open {filename}'
