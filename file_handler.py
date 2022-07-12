@@ -44,7 +44,7 @@ def log_all_files(filetype=['exe', 'lnk']):
                     dirs[:] = [d for d in dirs if d not in exclude]
                     for file in files:
                         if file.split('.')[-1] in filetype:
-                            #print(root+'\\'+file)
+                            print(root+'\\'+file)
                             if file.endswith('.exe'):
                                 fldict['exe'][file.split('.exe')[0].lower()] = root + "\\"+ file
                             elif file.endswith('.lnk') and root == "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs":
