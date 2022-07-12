@@ -35,6 +35,7 @@ def log_all_files(filetype=['exe', 'py', 'lnk']):
         except Exception as e:
             diff = "day"
     if 'day' in diff:
+        print("Logging System Files..")
         with open("preferences.json", "w+"):
             wdict = {"last_log": str(date)}
             for drive in drives:
