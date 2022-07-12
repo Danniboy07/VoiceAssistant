@@ -9,7 +9,7 @@ import webbrowser
 import pyttsx3
 import wikipedia
 
-log_all_files(['exe', 'py', 'lnk'])
+log_all_files(['exe', 'lnk'])
 
 # word booleans
 positive = ['yes', 'sure', 'alright', 'ok', 'okay', 'k', 'yeah', 'yep', 'positive', 'mhm', 'alr', 'done', 'affirmative']

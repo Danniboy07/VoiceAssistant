@@ -22,7 +22,7 @@ def searchfiles(filename, type=None):
             return(choicep)
 
 
-def log_all_files(filetype=['exe', 'py', 'lnk']):
+def log_all_files(filetype=['exe', 'lnk']):
     date = datetime.now()
     drives = ['C:\\', 'E:\\', f'C:\\Users\\{os.getlogin()}']
     fldict = {'exe': {}, 'gen': {}}
